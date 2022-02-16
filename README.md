@@ -49,6 +49,6 @@ Another project finished and man, it feels great.
 
 The challenges seemed very easy, and I was able to tap into all I've learned recently to get the job done nice and fast. The growing knowledge base were I store reusable pieces of code is a GAMECHANGER.
 
-Also, this chapter was PACKED with amazing techniques. My favourite technique from this chapter was the UserNotification stuff. It's such an essential functionality in modern apps, yet it's so easy to setup and use with SwiftUI.
+Also, this chapter was PACKED with amazing techniques. My favourite was the UserNotification stuff. It's such an essential functionality in modern apps, yet it's so easy to setup and use with SwiftUI.
 
 There's so much I don't know and so much I'm not even aware of, but I'm feeling very good about my progress. On to the next project.
