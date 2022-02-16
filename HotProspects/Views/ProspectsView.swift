@@ -68,7 +68,7 @@ struct ProspectsView: View {
                 let prospect = Prospect()
                 prospect.name = details[0]
                 prospect.emailAddress = details[1]
-                prospects.people.append(prospect)
+                prospects.add(prospect)
             case .failure(let error):
                 print(error.localizedDescription)
         }
