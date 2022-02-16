@@ -45,4 +45,10 @@ It shows a QR code that stores your information, then others can scan that code 
 
 #### Conclusion
 
-Completing this project got me very very hyped. I feel like I could go ahead and build any app right now. But then I remember there's so much stuff I don't know, and then there's so much stuff I'm not even aware off. Anyway, this was a PACKED chapter, and I feel like I learned alot of very useful things, but this could have been said about every project. I'm excited to get to the next one, where hopefully I'll get to practice all this and learn some new things too.
+Another project finished and man, it feels great.
+
+The challenges seemed very easy, and I was able to tap into all I've learned recently to get the job done nice and fast. The growing knowledge base were I store reusable pieces of code is a GAMECHANGER.
+
+Also, this chapter was PACKED with amazing techniques. My favourite technique from this chapter was the UserNotification stuff. It's such an essential functionality in modern apps, yet it's so easy to setup and use with SwiftUI.
+
+There's so much I don't know and so much I'm not even aware of, but I'm feeling very good about my progress. On to the next project.
