@@ -15,6 +15,7 @@
 		051BE48327BD758000F0970D /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 051BE48227BD758000F0970D /* CodeScanner */; };
 		051BE48527BD82F300F0970D /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051BE48427BD82F300F0970D /* ImageSaver.swift */; };
 		051BE48827BD85DD00F0970D /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051BE48727BD85DD00F0970D /* NotificationService.swift */; };
+		051BE48A27BD8C8700F0970D /* LocalStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051BE48927BD8C8700F0970D /* LocalStorageService.swift */; };
 		0541A69F27BD68AD00F93B66 /* ProspectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541A69E27BD68AD00F93B66 /* ProspectsView.swift */; };
 		0541A6A127BD68DD00F93B66 /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541A6A027BD68DD00F93B66 /* MeView.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +29,7 @@
 		051BE47E27BD6DC600F0970D /* Prospect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prospect.swift; sourceTree = "<group>"; };
 		051BE48427BD82F300F0970D /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 		051BE48727BD85DD00F0970D /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		051BE48927BD8C8700F0970D /* LocalStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageService.swift; sourceTree = "<group>"; };
 		0541A69E27BD68AD00F93B66 /* ProspectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProspectsView.swift; sourceTree = "<group>"; };
 		0541A6A027BD68DD00F93B66 /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +96,7 @@
 			children = (
 				051BE48427BD82F300F0970D /* ImageSaver.swift */,
 				051BE48727BD85DD00F0970D /* NotificationService.swift */,
+				051BE48927BD8C8700F0970D /* LocalStorageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				051BE48827BD85DD00F0970D /* NotificationService.swift in Sources */,
 				051BE47F27BD6DC600F0970D /* Prospect.swift in Sources */,
 				0541A69F27BD68AD00F93B66 /* ProspectsView.swift in Sources */,
+				051BE48A27BD8C8700F0970D /* LocalStorageService.swift in Sources */,
 				050EB9E827BD245E008866BD /* ContentView.swift in Sources */,
 				050EB9E627BD245E008866BD /* HotProspectsApp.swift in Sources */,
 			);

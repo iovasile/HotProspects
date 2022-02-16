@@ -15,18 +15,10 @@ class Prospect: Identifiable, Codable {
 }
 
 @MainActor class Prospects: ObservableObject {
-    let userDefaultsKey = "prospects"
+    private let localStorage = LocalStorageService()
     @Published private(set) var people: [Prospect]
     
-    init() {
-        if let data = UserDefaults.standard.data(forKey: userDefaultsKey) {
-            if let decoded = try? JSONDecoder().decode([Prospect].self, from: data) {
-                people = decoded
-                return
-            }
-        }
-        people = []
-    }
+    init() { people = localStorage.loadProspectsData() }
     
     func toggle(_ prospect: Prospect) {
         objectWillChange.send()
@@ -34,15 +26,11 @@ class Prospect: Identifiable, Codable {
         save()
     }
     
-    private func save() {
-        if let data = try? JSONEncoder().encode(people) {
-            UserDefaults.standard.set(data, forKey: userDefaultsKey)
-        }
-    }
+    private func save() { localStorage.saveProspectData(people) }
     
     func add(_ prospect: Prospect) {
         objectWillChange.send()
         people.append(prospect)
-         save()
+        save()
     }
 }
