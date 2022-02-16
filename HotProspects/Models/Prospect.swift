@@ -7,10 +7,15 @@
 
 import SwiftUI
 
+enum SortProspectsBy {
+    case name, mostRecent
+}
+
 class Prospect: Identifiable, Codable {
     var id = UUID()
     var name = "Anonymous"
     var emailAddress = ""
+    var createdAt = Date.now
     fileprivate(set) var isContacted = false
 }
 
@@ -32,5 +37,15 @@ class Prospect: Identifiable, Codable {
         objectWillChange.send()
         people.append(prospect)
         save()
+    }
+    
+    func sort(by type: SortProspectsBy) {
+        objectWillChange.send()
+        switch type {
+            case .name:
+                people.sort { $0.name < $1.name}
+            case .mostRecent:
+                people.sort { $1.createdAt < $0.createdAt}
+        }
     }
 }

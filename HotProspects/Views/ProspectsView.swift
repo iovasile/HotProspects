@@ -13,6 +13,7 @@ struct ProspectsView: View {
     @EnvironmentObject var prospects: Prospects
     
     let filter: FilterType
+    @State private var isSorting = false
     @State private var isShowingScanner = false
     
     var body: some View {
@@ -64,14 +65,28 @@ struct ProspectsView: View {
             }
             .navigationTitle(title)
             .toolbar {
-                Button {
-                    isShowingScanner = true
-                } label: {
-                    Label("Scan", systemImage: "qrcode.viewfinder")
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    Button {
+                        isShowingScanner = true
+                    } label: {
+                        Label("Scan", systemImage: "qrcode.viewfinder")
+                    }
+                    
+                    Button {
+                        isSorting = true
+                    } label: {
+                        Label("Sort", systemImage: "arrow.up.arrow.down")
+                    }
                 }
+                
             }
             .sheet(isPresented: $isShowingScanner) {
-                CodeScannerView(codeTypes: [.qr], simulatedData: "Ionut Vasile\nemail@iovasile.dev", completion: handleScan)
+                CodeScannerView(codeTypes: [.qr], simulatedData: "AIonut Vasileeee\nemail@iovasile.dev", completion: handleScan)
+            }
+            .confirmationDialog("Sort prospects", isPresented: $isSorting) {
+                Button("Sort by name") { prospects.sort(by: .name) }
+                
+                Button("Sort by most recent") { prospects.sort(by: .mostRecent) }
             }
         }
     }
