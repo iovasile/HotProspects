@@ -45,4 +45,4 @@ It shows a QR code that stores your information, then others can scan that code 
 
 #### Conclusion
 
-Completing this project has me very very hyped. I feel like I could go ahead and build any app right now. But then I remember there' so much I don't know, and then there's so much stuff I'm not even aware off. Anyway, this was a PACKED chapter, learned so much stuff. I'm excited to get to the next one, where hopefully I'll get to practice all this and learn some new stuff too.
+Completing this project got me very very hyped. I feel like I could go ahead and build any app right now. But then I remember there's so much stuff I don't know, and then there's so much stuff I'm not even aware off. Anyway, this was a PACKED chapter, and I feel like I learned alot of very useful things, but this could have been said about every project. I'm excited to get to the next one, where hopefully I'll get to practice all this and learn some new things too.
