@@ -25,15 +25,26 @@ struct MeView: View {
                 TextField("Email address", text: $emailAddress)
                     .font(.title)
                     .textContentType(.emailAddress)
-                Image(uiImage: generateQRCode(from: "\(name)\n\(emailAddress)"))
+                Image(uiImage: qrUIImage)
                     .interpolation(.none)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 200, height: 200)
+                    .contextMenu {
+                        Button {
+                            ImageSaver().writeToPhotoAlbum(image: qrUIImage)
+                        } label: {
+                            Label("Save code", systemImage: "square.and.arrow.down")
+                        }
+                    }
                     
             }
             .navigationTitle("Your code")
         }
+    }
+    
+    var qrUIImage: UIImage {
+        generateQRCode(from: "\(name)\n\(emailAddress)")
     }
     
     func generateQRCode(from string: String) -> UIImage {

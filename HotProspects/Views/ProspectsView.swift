@@ -9,10 +9,10 @@ import SwiftUI
 import CodeScanner
 
 struct ProspectsView: View {
+    @EnvironmentObject var notificationService: NotificationService
+    @EnvironmentObject var prospects: Prospects
     
     let filter: FilterType
-    
-    @EnvironmentObject var prospects: Prospects
     @State private var isShowingScanner = false
     
     var body: some View {
@@ -40,6 +40,13 @@ struct ProspectsView: View {
                                 Label("Mark contacted", systemImage: "person.crop.circle.fill.badge.checkmark")
                             }
                             .tint(.green)
+                            
+                            Button {
+                                notificationService.addNotification(for: prospect)
+                            } label: {
+                                Label("Remind me", systemImage: "bell")
+                            }
+                            .tint(.orange)
                         }
                     }
                 }
