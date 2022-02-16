@@ -11,10 +11,31 @@ struct ProspectsView: View {
     
     let filter: FilterType
     
+    @EnvironmentObject var prospects: Prospects
+    
     var body: some View {
         NavigationView {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-                .navigationTitle(title)
+            List {
+                ForEach(filteredProspects) { prospect in
+                    VStack(alignment: .leading) {
+                        Text(prospect.name)
+                            .font(.headline)
+                        Text(prospect.emailAddress)
+                            .foregroundColor(.secondary)
+                    }
+                }
+            }
+            .navigationTitle(title)
+            .toolbar {
+                Button {
+                    let prospect = Prospect()
+                    prospect.name = "Ionut Vasile"
+                    prospect.emailAddress = "email@iovasile.dev"
+                    prospects.people.append(prospect)
+                } label: {
+                    Label("Scan", systemImage: "qrcode.viewfinder")
+                }
+            }
         }
     }
     
@@ -28,6 +49,17 @@ struct ProspectsView: View {
                 return "Uncontacted People"
         }
     }
+    
+    var filteredProspects: [Prospect] {
+        switch filter {
+            case .none:
+                return prospects.people.filter { _ in true }
+            case .contacted:
+                return prospects.people.filter { $0.isContacted }
+            case .uncontacted:
+                return prospects.people.filter { !$0.isContacted }
+        }
+    }
 }
 
 extension ProspectsView {
@@ -39,5 +71,6 @@ extension ProspectsView {
 struct ProspectsView_Previews: PreviewProvider {
     static var previews: some View {
         ProspectsView(filter: .none)
+            .environmentObject(Prospects())
     }
 }
