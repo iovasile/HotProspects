@@ -40,7 +40,7 @@ It shows a QR code that stores your information, then others can scan that code 
     ➡️ Set .interpolation to .none to display the generated QRCode correctly
     ➡️ Created a context menu to allow the user to save the qr code to their gallery
     ➡️ Used Swift Package Manager to add a QRCode Scanner dependency
-    ➡️ Implemented a Local Notification system using UserNotification, allowing the user to set a reminder to contact prospects
+    ➡️ Implemented UserNotification, allowing the user to set a reminder to contact prospects
     ➡️ Added multiple buttons to the item swipe menu
 
 #### Conclusion
